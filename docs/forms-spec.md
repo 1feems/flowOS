@@ -11,7 +11,7 @@ Technical reference for agent screening, application intake, and program configu
 | # | Form | Who fills it | When |
 |---|---|---|---|
 | 1 | Program Info | Operator | Once per program |
-| 2 | Program Intent | Operator | Each funding cycle |
+| 2 | Program Round Intent | Operator | Each funding cycle |
 | 3 | Rubric — User Outcome | Operator | Once per program or round |
 | 4 | Rubric — Ecosystem Outcome | Operator | Once per program or round |
 
@@ -40,8 +40,9 @@ Sets the permanent identity of a grant program. Created once by the operator. Al
 | Program Description | Long Text | Yes | Agent reads to understand program purpose and gap being addressed |
 | Funding Type | Static | Yes | Context — always Grant in v1 |
 | Mechanism | Dropdown | Yes | Context — always Grant in v1. Options: Grant |
-| Program Focus | Checkbox group | Yes | Agent assesses whether submitted project targets the right outcome. User Outcomes: Acquisition, Retention, Activation. Ecosystem Outcomes: Security, Infrastructure, Interoperability, Developer Tools, Ecosystem Growth |
-| Vertical | Dropdown | Yes | Determines application form template. Signals which vertical the program targets. Options: DeFi / Protocols, Consumer Apps / Wallets |
+| Outcome Focus | Dropdown | Yes | Agent uses to determine which outcome lens to apply. Options: User Outcome, Ecosystem Outcome |
+| Area of Focus | Checkbox group | Yes | Agent uses to assess whether submitted project targets the right focus area. User Outcome: Acquisition, Retention, Activation, Other. Ecosystem Outcome: Security, Infrastructure, Interoperability, Developer Tools, Ecosystem Growth, Other |
+| Vertical | Dropdown | Yes | Determines application form template. Options: DeFi / Protocols, Consumer Apps / Wallets |
 | Eligibility Criterion 1 | Text | Yes | Agent checks independently — sets eligible: true / false |
 | Eligibility Criterion 2 | Text | Yes | Agent checks independently — sets eligible: true / false |
 | Eligibility Criterion 3 | Text | Yes | Agent checks independently — sets eligible: true / false |
@@ -54,9 +55,32 @@ Sets the permanent identity of a grant program. Created once by the operator. Al
 
 ---
 
-## Form 2 — Program Intent
+## Form 2 — Program Round Intent
 
-*(To be completed)*
+Filled each funding cycle. Captures round logistics and program intent for the round. Pre-filled fields carry over from Program Info automatically.
+
+| Field | Type | Required | Agent Use |
+|---|---|---|---|
+| Program Name | Pre-filled from Program Info | — | Context |
+| Program Description | Pre-filled from Program Info | — | Context |
+| Vertical | Pre-filled from Program Info | — | Context |
+| Outcome Focus | Pre-filled from Program Info | — | Context |
+| Area of Focus | Pre-filled from Program Info | — | Context |
+| Eligibility | Pre-filled from Program Info | — | Agent checks each criterion against submitted application |
+| Funding Round ID | Text | Yes | Round identifier — used in all agent output records |
+| Grant Type | Dropdown | Yes | Context for agent. Options: Builder Grant, Infrastructure Grant, Seed Grant |
+| Round Start Date | Date picker | Yes | Metadata |
+| Round End Date | Date picker | Yes | Metadata |
+| Total Budget (Token) | Number | Yes | Agent uses to assess budget reasonableness |
+| Total Budget (USD) | Number | Optional | Agent uses to assess budget reasonableness |
+| Area of Focus (this round) | Checkbox group | Yes | Agent uses as primary intent signal for this round. Options: Acquisition, Retention, Activation, Other |
+| Target Applicants | Short Text | Yes | Agent uses for fit assessment — who is this round looking for? |
+| Project Type 1 | Editable text | Optional | Agent uses to assess whether submitted project is in scope |
+| Project Type 2 | Editable text | Optional | Agent uses to assess whether submitted project is in scope |
+| Project Type 3 | Editable text | Optional | Agent uses to assess whether submitted project is in scope |
+| Impact Metric 1 | Text | Yes | Agent tags funded projects with these metrics in registry output |
+| Impact Metric 2 | Text | Optional | Agent tags funded projects with these metrics in registry output |
+| Impact Metric 3 | Text | Optional | Agent tags funded projects with these metrics in registry output |
 
 ---
 
@@ -83,7 +107,7 @@ Shown before the full application loads at /apply/[round-id]. All fields auto-po
 | Field | Type | Required | Pulls From | Agent Use |
 |---|---|---|---|---|
 | What type of project are you building? | Dropdown | Yes | Form 1 — Vertical | Loads correct application form template. Agent uses for vertical context |
-| Which outcome does your project primarily target? | Dropdown | Yes | Form 1 — Program Focus | Agent uses as first intent_alignment signal. Options: Acquisition, Retention, Activation |
+| Which outcome does your project primarily target? | Dropdown | Yes | Form 1 — Area of Focus | Agent uses as first intent_alignment signal. Options: Acquisition, Retention, Activation |
 | Do you meet the following requirements? | Checklist — must check all | Yes | Form 1 — Eligibility Criteria (1, 2, 3) | All checked = eligible: true. Any unchecked = eligible: false |
 
 ---
