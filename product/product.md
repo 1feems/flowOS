@@ -59,7 +59,7 @@ Pass applications enter a structured queue with the AI evaluation and recommenda
 
 ## How It Works
 
-**1. Operator sets up the program**
+**1. Program Intent & Form Builder**
 - Fills out the Program Info Builder — program identity, ecosystem, eligibility criteria, outcome focus, vertical, expected deliverables
 - Fills out the Round Intent Builder — what this round is funding, budget, target applicants, project types in scope, impact metrics
 - Configures the Rubric — scoring criteria used by both the AI agent and human reviewers
@@ -88,10 +88,11 @@ Pass applications enter a structured queue with the AI evaluation and recommenda
 
 **How the Registry Works**
 - Every approved project is automatically added when an operator clicks Approve — no manual entry
+- Each project record contains: program, round, grant type, approved amount, decision date, and the KPI metric slots defined at the round level
+- The program-level view shows: round ID, open/close dates, total applications, approved grants, total allocated, average grant size, and pass rate
 - KPI fields are pre-defined at the round level — the same metrics apply to every funded project in that round, making outcomes comparable
 - Operators update KPI fields as funded projects deliver — creating a structured record of what each round produced
-- The registry is readable by stakeholders without queue access — Foundation Leadership and Protocol Treasury can see program performance without operator access
-- Each new round adds to the same registry — performance is visible and comparable across rounds and tracks over time
+- Each new round adds to the same registry — so performance is visible and comparable across rounds and tracks over time
 
 ---
 
