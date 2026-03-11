@@ -26,14 +26,20 @@ The platform implements your funding strategy. The services produce it.
 
 ## Who It's For
 
-**Funding Program Operators**
-Running grants, bounties, builder incentives, or any structured non-dilutive program. FlowOS replaces the Notion and spreadsheet stack with a system where program intent drives intake, review, and record-keeping. For small teams managing high volume, it's the difference between drowning and having a process that scales.
+**Users**
 
-**Ecosystem Growth Leads**
-Responsible for where non-dilutive capital goes. Right now there's no clean way to compare what different programs and tracks actually delivered across rounds. FlowOS gives a program-level view of outcomes linked to spend.
+| User | What they do in FlowOS |
+|---|---|
+| Funding Program Operators | Set up programs, configure forms and rubrics, manage the review queue, make funding decisions |
+| Reviewers | Score applications in the review queue using the rubric, with AI pre-scores already surfaced |
+| Builders / Applicants | Submit through the public form, receive feedback if revision is needed, resubmit |
 
-**Protocol Treasuries**
-Accountable for spend reporting to governance or token holders. FlowOS links spend to structured outcomes defined before applications open — not just a record of who received funding, but what it produced.
+**Stakeholders**
+
+| Stakeholder | What they need from FlowOS |
+|---|---|
+| Ecosystem Growth Leads | Program-level view of what different rounds and tracks are producing to inform future allocation |
+| Protocol Treasuries | Structured outcome record linking spend to results for governance reporting and budget justification |
 
 ---
 
