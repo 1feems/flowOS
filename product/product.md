@@ -1,6 +1,6 @@
 # FlowOS — Product Overview
 
-FlowOS is a funding strategy platform for crypto ecosystems. It gives the teams running non-dilutive capital programs a structured way to design programs, run consistent intake and review, and track what their funding produced — so every round builds on the last instead of starting from scratch.
+FlowOS is a funding coordination and strategy platform for ecosystem grants and equity-free funding programs that connects program design, AI-assisted application screening, and funded project tracking into one system — enabling ecosystems to align funding decisions with their long-term growth strategy.
 
 The platform implements your funding strategy. The services produce it.
 
@@ -8,19 +8,10 @@ The platform implements your funding strategy. The services produce it.
 
 ## The Problem
 
-- Funding programs are scattered across forums, Notion pages, forms, and spreadsheets — no unified lifecycle from program intent → applications → approvals → outcomes
-- Funders and reviewers drown in proposals evaluated against ad-hoc criteria, making decisions slow, inconsistent, and hard to compare across rounds
-- Ecosystems publish spend data but rarely have structured outcome data (TVL, users, infra readiness), so they can't tell which programs or tracks are actually working
-- Data about rounds and funded projects is scattered — ecosystems can't see, compare, or iterate on what their different programs actually produce over time
-
----
-
-## What FlowOS Does
-
-- Define program intent — goals, tracks, eligibility — in a clear, reusable schema that drives everything downstream
-- Run AI-powered intake that pre-filters and labels every application — Pass / Needs Revision / Not a Fit — before human review
-- Review with consistent rubrics instead of ad-hoc criteria, with AI pre-scores already surfaced for every Pass application
-- Keep a registry of programs, rounds, and funded projects with pre-defined impact metrics, so ecosystems can see how each program performs over time — without turning into heavy project management software
+- There is no clear way to define what a program is funding before intake opens, so every round is built from scratch and nothing carries forward
+- Applications arrive with no pre-filtering against program criteria, so teams read everything manually and reviewers work from different standards each round
+- There is no structured record of what programs produced, so performance stays invisible and every budget conversation starts without evidence
+- Marketing and ecosystem teams have no visibility into what funding programs are building, so there is no way to align or collaborate around shared outcomes
 
 ---
 
@@ -30,41 +21,83 @@ The platform implements your funding strategy. The services produce it.
 
 | User | What they do in FlowOS |
 |---|---|
-| Funding Program Operators | Set up programs, configure forms and rubrics, manage the review queue, make funding decisions |
-| Reviewers | Score applications in the review queue using the rubric, with AI pre-scores already surfaced |
+| Program Operators | Set up programs, configure forms and rubrics, manage the review queue, make funding decisions, track program performance in the registry |
+| Grant Committee / Reviewers | Score applications in the review queue using the rubric, with AI pre-scores already surfaced |
 | Builders / Applicants | Submit through the public form, receive feedback if revision is needed, resubmit |
 
 **Stakeholders**
 
 | Stakeholder | What they need from FlowOS |
 |---|---|
-| Ecosystem Growth Leads | Program-level view of what different rounds and tracks are producing to inform future allocation |
-| Protocol Treasuries | Structured outcome record linking spend to results for governance reporting and budget justification |
+| Foundation Leadership | Program-level view of what rounds and tracks are producing to inform future allocation |
+| Protocol Treasury | Structured outcome record linking spend to results for governance reporting and budget justification |
 
 ---
 
 ## Platform Features
 
-**Program Intent Builder**
-Define program goals, eligibility, tracks, and KPIs in a structured form before any applications open. This config drives the application form, the AI agent, the rubric, and the registry — one source of truth for the whole program.
+**Form Builder**
 
-**Structured Application Forms**
-Vertical-specific templates (DeFi / Protocols, Consumer Apps / Wallets) that load from the program config. A short pre-screening confirms fit before the full form loads.
+- **Program Info Builder** — Set the permanent identity of a funding program: ecosystem, vertical, eligibility criteria, outcome focus, and expected deliverables
+- **Round Intent Builder** — Define what a specific round is funding: budget, target applicants, project types in scope, and the impact metrics that will populate the registry
+- **Rubric Builder** — Configure the scoring criteria used by both the AI screening agent and human reviewers
+- **Application Form Builder — DeFi / Protocols** — Vertical-specific form that loads from the program config and collects the structured information reviewers need
+- **Application Form Builder — Consumer Apps / Wallets** — Same structure, tailored for consumer-facing projects
 
 **AI-Assisted Pre-Filtering**
-Every application is evaluated against program intent before human review — Pass / Needs Revision / Not a Fit, with pre-scores per rubric criterion, strengths, risks, and a plain-language summary. Needs Revision applications receive specific feedback to resubmit. Human reviewers make every final decision.
+Every application is automatically evaluated against the program's eligibility criteria, stated intent, round goals, expected deliverables, and rubric — before any human reviews it. Each submission comes back with a triage decision (Pass / Needs Revision / Not a Fit), a recommend approve / decline label, preliminary scores per rubric criterion, strengths, risks, and a plain-language summary. Needs Revision applications receive specific actionable feedback so applicants can resubmit. Human reviewers make every final decision.
 
-**Review Queue**
-All Pass applications enter a structured queue with the AI evaluation already surfaced. Reviewers score using the same rubric every time — consistent and comparable across rounds.
+**Structured Review Queue**
+Pass applications enter a structured queue with the AI evaluation and recommendation already surfaced. Reviewers score against the same rubric every round — consistent and comparable across rounds.
 
-**Funding Registry**
-Approved projects are automatically added to a registry with the KPI fields defined at the program level. A structured record of what each program funded and what it produced, comparable across rounds and tracks.
+**Program Registry**
+
+- **Program-level view** — Each round is recorded with its ID, dates, total applications, approved grants, total allocated budget, and pass rate — so operators can see how a round performed at a glance
+- **Project-level profiles** — Approved projects are automatically added with grant type, approved amount, decision date, and the KPI metric slots defined at the program level — a structured record of what each round funded and what it was expected to produce
+
+---
+
+## How It Works
+
+**1. Operator sets up the program**
+- Fills out the Program Info Builder — program identity, ecosystem, eligibility criteria, outcome focus, vertical, expected deliverables
+- Fills out the Round Intent Builder — what this round is funding, budget, target applicants, project types in scope, impact metrics
+- Configures the Rubric — scoring criteria used by both the AI agent and human reviewers
+- Publishes the round — system generates a public application link at /apply/[round-id]
+
+**2. Builder applies**
+- Opens the public link — no account required
+- Completes Pre-Screening — 3 questions pulled from the program config to confirm fit before the full form loads
+- Completes the Application Form — vertical-specific template (DeFi / Protocols or Consumer Apps / Wallets)
+- Submits — receives confirmation and application ID
+
+**3. AI screens the application**
+- Every submission is automatically evaluated against the program's eligibility criteria, stated intent, round goals, expected deliverables, and rubric
+- Returns Pass / Needs Revision / Not a Fit with a recommend approve / decline label, pre-scores per rubric criterion, strengths, risks, and a plain-language summary
+- Needs Revision applications receive specific actionable feedback so applicants can resubmit
+
+**4. Operator reviews and decides**
+- Pass applications enter the review queue with the AI evaluation and recommendation already surfaced
+- Reviewer scores against the rubric — same criteria applied every round
+- Operator clicks Approve
+
+**5. Approved Grant Profile created — Registry updated**
+- Approved Grant Profile is auto-created — program, round, grant type, approved amount, decision date, and KPI metric slots defined at the round level
+- Registry row updates automatically — program-level view reflects total applications, approved grants, total allocated, and pass rate
+- Every round adds to the record — performance is visible and comparable across rounds over time
+
+**How the Registry Works**
+- Every approved project is automatically added when an operator clicks Approve — no manual entry
+- KPI fields are pre-defined at the round level — the same metrics apply to every funded project in that round, making outcomes comparable
+- Operators update KPI fields as funded projects deliver — creating a structured record of what each round produced
+- The registry is readable by stakeholders without queue access — Foundation Leadership and Protocol Treasury can see program performance without operator access
+- Each new round adds to the same registry — performance is visible and comparable across rounds and tracks over time
 
 ---
 
 ## Services
 
-The platform operationalises your funding strategy. The services help you build it.
+The platform implements your funding strategy. The services help you build it.
 
 | Service | What it is | When |
 |---|---|---|
