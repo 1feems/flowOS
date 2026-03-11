@@ -30,7 +30,7 @@ FlowOS gives grant operators a connected system for the full funding lifecycle:
 | Working prototype — core screens, mock agent pipeline, DB seed | [PRD — Current State](docs/prd.md#09--current-state) |
 | Technical spec — stack, data flow, agent schema | [Technical Architecture](docs/technical-architecture.md) |
 | Problem validation — direct professional experience across 4 ecosystems | [Problem Validation](research/problem-validation.md) |
-| Product validation — forms tested against live Stacks grant program + accepted application | [Validation](research/validation.md) |
+| User validation — forms tested against live Stacks grant program and an accepted application (BNS One) | [User Validation](research/user-validation.md) |
 
 ---
 
@@ -51,7 +51,7 @@ FlowOS gives grant operators a connected system for the full funding lifecycle:
 | Document | Description |
 |---|---|
 | [Problem Validation](research/problem-validation.md) | Problem validated through direct professional experience + published research |
-| [Product Validation](research/validation.md) | FlowOS forms tested against live Stacks grant program and an accepted application |
+| [User Validation](research/user-validation.md) | FlowOS forms tested against live Stacks grant program and an accepted application (BNS One) |
 
 ---
 
