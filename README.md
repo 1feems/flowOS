@@ -70,6 +70,7 @@ Additional services available to support setup, design, and analysis using FlowO
 | Document | Description |
 |---|---|
 | [PRD](docs/prd.md) | Product requirements, scope, user flows, current build state |
+| [Sitemap & System Overview](docs/sitemap.md) | Screen map, system flow, and user flows for operator and public sections |
 
 **Research**
 
