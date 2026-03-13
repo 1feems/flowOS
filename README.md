@@ -7,20 +7,12 @@ Mkondo is a funding coordination and strategy platform for ecosystem grants and 
 
 ## The Problem
 
-- Without a structured way to capture program goals, criteria, and evaluation standards, every round is rebuilt from scratch — and nothing improves over time.
-- Grant programs involve many teams and touch many platforms — intake, review, announcements, and reporting spread across GitHub, Notion, forums, and internal docs — with no single view of what's been funded, what's active, and what it's producing.
-- As grant programs grow, so does the volume of applications — and reading through unaligned submissions takes time away from the ones that matter.
-- Funding programs across grants, hackathons, and initiatives run in silos — with no shared structure to coordinate what each program is funding or how they fit together.
-- Treasuries and funding decision-makers have no structured record linking funding decisions to outcomes — spend data exists but what it produced doesn't, making it difficult to justify budgets or allocate capital with confidence.
-- There is no strategy layer above individual programs — no way for ecosystems to compare what different programs produced, identify what's working, and deliberately improve how they deploy capital over time.
-
----
-
-## Who It's For
-
-- **Funding Program Operators** — design and run grants and other equity-free funding programs, review applications, and make funding decisions.
-- **Foundations & Ecosystem Teams** — coordinate funding programs across grants, hackathons, and initiatives and understand what funded projects are producing.
-- **Protocol Treasuries & Governance** — view structured records linking funding spend to outcomes to inform reporting and capital allocation decisions.
+- Without a structured way to capture program goals, criteria, and evaluation standards, every round is rebuilt from scratch — and nothing compounds over time.
+- Grant programs touch many teams and platforms — with no single view of what's been funded,what's active, and what it's producing.
+- As application volume grows, there is no consistent way to identify the most aligned submissions before human review.
+- Funding programs across grants, hackathons, and initiatives run in silos — with no shared structure connecting what each is funding or how they fit together.
+- There is no structured record linking funding decisions to outcomes — spend data exists but what it produced doesn't.
+- There is no strategy layer above individual programs — no way to compare what different programs produced, identify what's working, and improve how capital is deployed over time.
 
 ---
 
@@ -34,6 +26,13 @@ Mkondo is a funding coordination and strategy platform for ecosystem grants and 
 
 ---
 
+## Who It's For
+
+- **Funding Program Operators** — design and run grants and other equity-free funding programs, review applications, and make funding decisions.
+- **Foundations & Ecosystem Teams** — coordinate funding programs across grants, hackathons, and initiatives and understand what funded projects are producing.
+- **Protocol Treasuries & Governance** — view structured records linking funding spend to outcomes to inform reporting and capital allocation decisions.
+
+---
 ## How It Works
 
 1. **Define the Program** — Funding teams configure the program in Mkondo by setting core details such as eligibility, focus areas, desired outcomes, and evaluation criteria.
