@@ -10,7 +10,7 @@ FlowOS is the direct product of this research — applying lifecycle architectur
 
 ---
 
-## Articles
+## Articles/Writings
 
 - [How to Design Funding Programs Around User Outcomes](https://x.com/feemschats/status/2031071500997112071)
 - [Crypto Doesn't Have a Funding Problem. It Has a Design Problem](https://x.com/feemschats/status/2016572948404986367)
