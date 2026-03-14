@@ -6,10 +6,13 @@ The problem Mkondo solves was observed and documented through direct professiona
 
 ## The Problem
 
-Grant programs have no structured way to capture goals, criteria, and evaluation standards so every round is rebuilt from scratch and nothing improves over time.
-At volume, reviewing every application manually creates backlogs, inconsistent decisions, and reviewer burnout — with no way to prioritize what's actually worth reading.
-Funding programs across grants, hackathons, and initiatives run in silos with no shared structure to coordinate what each program is funding or how they fit together.
-Treasuries and funding decision-makers have no structured record linking funding decisions to outcomes — spend data exists but what it produced doesn't, making it difficult to justify budgets or allocate capital with confidence.
+There is no shared workflow to translate funding strategy into structured program goals, eligibility criteria, evaluation standards, and KPIs before a round launches.
+
+As application volume grows, programs lack scalable intake and prioritization systems to surface the most aligned submissions early.
+
+Funding activity across grants, hackathons, and initiatives is spread across tools and teams without a unified program structure.
+
+Treasury and program teams lack a structured view linking funding decisions, programs, rounds, and measurable outcomes.
 
 ---
 
