@@ -75,7 +75,6 @@ The current agent pipeline pre-screens applications against program intent — r
 | Evidence | Document |
 |---|---|
 | Working prototype — core screens, mock agent pipeline, DB seed | [PRD — Current State](docs/prd.md#09--current-state) |
-| Prototype — screen designs and user flows | Figma (coming soon) |
 | Problem validation — direct professional experience across 4 ecosystems | [Problem Validation](research/problem-validation.md) |
 | User validation — forms tested against live Stacks grant program and an accepted application (BNS One) | [User Validation](research/user-validation.md) |
 
