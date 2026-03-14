@@ -49,7 +49,7 @@ Mkondo serves crypto and Web3 ecosystems that run non-dilutive funding programs,
 
 - Program creation workflow: Program Intent Form, Application Form setup, and Rubric setup
 - Public application form for builders with no login required
-- Application Intake API to validate and store submissions and trigger the screening agent
+-  Application intake flow to validate submissions and support screening
 - Screening agent that triages applications as Pass / Needs Revision / Not a Fit based on program intent
 - Operator review queue displaying the application, AI evaluation summary, rubric scoring, and decision tools
 - Program registry storing programs, rounds, funded projects, and KPI rollups
@@ -103,7 +103,7 @@ Operators define program goals, target applicants, eligibility criteria, tracks,
 
 ### Application Intake
 
-Each round generates a public application form URL. Builders submit applications without logging in. The Application Intake API validates required fields, stores the submission, returns a confirmation with an application ID, and triggers the screening agent asynchronously.
+Each round generates a public application form URL. Builders submit applications without logging in. The intake flow is designed to validate required fields, capture submissions, return a confirmation with an application ID, and support the screening process.
 
 ### Application Intake and Review
 
@@ -116,6 +116,7 @@ The registry stores records for programs, rounds, and tracks. Approved applicati
 ## 07 —  AI-Assisted Pre-Filtering AGent
 
 Triages incoming applications before human review. Each submission receives a structured assessment and is labeled Pass, Needs Revision, or Not a Fit, helping reviewers quickly identify which applications should move forward for full evaluation.
+
 Further technical details are maintained in the private repository.
 
 ### Agent Output Fields
@@ -152,16 +153,20 @@ The agent does not make approval decisions. Human reviewers evaluate Pass applic
 - KPI metric slots defined at the program level
 - Optional external ID link for cross-platform tracking
 
+
 ## 09 — Current State
 
 ### Existing Components
 
-- Working prototype with core screens: Dashboard, Applications Queue, Application Detail, AI Evaluation panel, and Decision screen
-- Functional forms: Program Info, Program Intent, Public Application Form, and Rubric
-- Application Intake API endpoint
-- Mock screening agent pipeline producing structured JSON results
-- Database seed script containing example programs, rounds, applications, agent results, and registry entries
-- Program registry with Programs table and program detail pages
+- Working prototype with core screens, including Dashboard, Applications Queue, Application Detail, AI evaluation views, and registry views
+- Functional operator-side form flows for Program Info, Program Intent, Application Form setup, and Rubric setup
+- Mock screening agent pipeline producing structured results for application review
+- Registry prototype with program and funded project views
+
+### Mocked vs Functional Components
+
+The screening layer currently runs on deterministic mock outputs. Live LLM integration, application intake infrastructure, and deeper backend functionality are planned for later implementation.
+
 
 ### Mocked vs Functional Components
 
@@ -171,10 +176,11 @@ The screening agent currently produces deterministic mock outputs. Integrating a
 
 | Risk | Mitigation |
 |---|---|
-| Agent accuracy depends on the quality of the intent form | Use structured templates with examples and validation |
+| Screening quality depends on the quality of the intent form | Use structured templates with examples and validation |
 | Operator adoption requires changes to existing workflows | Provide documentation and operator playbooks |
 | Builder completion rates for application forms | Include clear guidance and a revision flow with actionable feedback |
 | KPI fields may remain empty | Registry design highlights missing metrics to encourage completion |
+
 
 ## 11 — Roadmap (Post v1)
 
