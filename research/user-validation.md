@@ -1,6 +1,6 @@
-# FlowOS — Product Testing
+# Mkondo — Product Testing
 
-**Purpose:** Product testing — not customer validation. FlowOS forms were mapped against live grant programs and real approved applications to confirm the product works as intended for the people running it. This documents what was tested and what it confirmed.
+**Purpose:** Product testing — not customer validation. Mkondo forms were mapped against live grant programs and real approved applications to confirm the product works as intended for the people running it. This documents what was tested and what it confirmed.
 
 ---
 
@@ -54,11 +54,11 @@
 
 ---
 
-## Where FlowOS Fits
+## Where Mkondo Fits
 
 **Grant Operators** — the team running the program day to day
 
-| Step | FlowOS |
+| Step | Mkondo |
 |---|---|
 | Define what the program funds | Program setup forms — eligibility, rubric, outcome focus, and grant scope defined once and applied every round |
 | Open a new round | Round setup — budget, who the round is for, and how success is measured |
@@ -67,7 +67,7 @@
 
 **Treasury Committee** — meets quarterly to review what the grant program produced and approve strategy and budgets
 
-| Step | FlowOS |
+| Step | Mkondo |
 |---|---|
 | Quarterly review calls | The registry gives the committee a structured record per round — funded projects, outcome metrics, and what each round produced — ready to pull from before every call |
 | Budget approvals | Program setup creates a record of what each program is designed to fund, at what cost, and against what metrics — decisions are grounded in structured data, not recall |
