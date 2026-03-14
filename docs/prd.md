@@ -1,4 +1,4 @@
-# FlowOS — Product Requirements Document
+# Mkondo — Product Requirements Document
 
 Early Proof of Concept
 
@@ -6,11 +6,11 @@ Early Proof of Concept
 
 ## 01 — Product Overview
 
-FlowOS is a funding coordination platform that helps ecosystems design clear grant programs, run AI-assisted intake and review, and maintain a program-level registry of rounds, funded projects, and their agreed impact metrics.
+Mkondo is a funding coordination platform that helps ecosystems design clear grant programs, run AI-assisted intake and review, and maintain a program-level registry of rounds, funded projects, and their agreed impact metrics.
 
 We turn chaotic, fragmented grant activity into a structured funding lifecycle — one that lets ecosystems aim capital at the right projects and learn from every round.
 
-**What FlowOS lets funders do**
+**What Mkondo lets funders do**
 
 | Action | What it means |
 |---|---|
@@ -19,14 +19,14 @@ We turn chaotic, fragmented grant activity into a structured funding lifecycle �
 | Review | Review with consistent rubrics instead of ad-hoc criteria |
 | Learn | Keep a registry of programs, rounds, and funded projects with pre-defined impact metrics |
 
-**What FlowOS is not**
-FlowOS does not do milestone tracking, payment processing, or end-to-end grant ops. It does one thing well: structured program design, AI-assisted triage, consistent review, and a registry that lets ecosystems compare what their capital actually produced.
+**What Mkondo is not**
+Mkondo does not do milestone tracking, payment processing, or end-to-end grant ops. It does one thing well: structured program design, AI-assisted triage, consistent review, and a registry that lets ecosystems compare what their capital actually produced.
 
 ---
 
 ## 02 — Problem Statement
 
-FlowOS serves crypto and Web3 ecosystems that run non-dilutive funding programs — foundations, DAOs, L2s, treasuries — and the operators who manage those programs.
+Mkondo serves crypto and Web3 ecosystems that run non-dilutive funding programs — foundations, DAOs, L2s, treasuries — and the operators who manage those programs.
 
 **The four core breakdowns**
 
@@ -41,7 +41,7 @@ FlowOS serves crypto and Web3 ecosystems that run non-dilutive funding programs 
 
 ## 03 — Target Users
 
-| User | Role | What FlowOS gives them |
+| User | Role | What Mkondo gives them |
 |---|---|---|
 | Grant / Ecosystem Funding Operators | Design programs, run rounds, coordinate reviewers | Structured intent forms, AI pre-filtering, clear review queue |
 | Ecosystem / Growth Leads | Decide where non-dilutive capital goes | Program registry and metrics to compare rounds and tracks |
@@ -122,7 +122,7 @@ Stores program, round, and track records. Approved applications auto-create a fu
 
 ## 07 — Screening Agent
 
-The FlowOS screening agent is a program-intent-driven prefilter. It reads program intent, eligibility criteria, and evaluation rubric, then triages each application into Pass / Needs Revision / Not a Fit.
+The Mkondo screening agent is a program-intent-driven prefilter. It reads program intent, eligibility criteria, and evaluation rubric, then triages each application into Pass / Needs Revision / Not a Fit.
 
 See [agent section in private repo] for full agent PRD, directives, and output schema.
 
