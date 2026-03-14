@@ -2,195 +2,184 @@
 
 Early Proof of Concept
 
----
-
 ## 01 — Product Overview
 
-Mkondo is a funding coordination platform that helps ecosystems design clear grant programs, run AI-assisted intake and review, and maintain a program-level registry of rounds, funded projects, and their agreed impact metrics.
+Mkondo is a funding coordination platform that helps ecosystems design clear grant programs, run AI-assisted application intake and review, and maintain a registry of programs, rounds, funded projects, and their impact metrics.
 
-We turn chaotic, fragmented grant activity into a structured funding lifecycle — one that lets ecosystems aim capital at the right projects and learn from every round.
+The goal is to turn fragmented grant activity into a structured lifecycle so ecosystems can direct capital more deliberately and learn from each funding round.
 
-**What Mkondo lets funders do**
+### What Mkondo Enables
 
 | Action | What it means |
 |---|---|
-| Design | Define program intent — goals, tracks, eligibility — in a clear, reusable schema |
-| Screen | Run AI-powered intake that pre-filters and labels applications — Pass / Needs Revision / Not a Fit |
-| Review | Review with consistent rubrics instead of ad-hoc criteria |
-| Learn | Keep a registry of programs, rounds, and funded projects with pre-defined impact metrics |
+| Design | Define program intent, goals, tracks, and eligibility in a structured schema |
+| Screen | Pre-filter applications using an AI triage system that labels submissions Pass / Needs Revision / Not a Fit |
+| Review | Evaluate applications with consistent rubrics rather than ad-hoc criteria |
+| Learn | Maintain a registry of programs, rounds, and funded projects with defined impact metrics |
 
-**What Mkondo is not**
-Mkondo does not do milestone tracking, payment processing, or end-to-end grant ops. It does one thing well: structured program design, AI-assisted triage, consistent review, and a registry that lets ecosystems compare what their capital actually produced.
+### What Mkondo Does Not Cover
 
----
+Mkondo does not handle milestone tracking, payment processing, or full grant operations. Its focus is on structured program design, AI-assisted triage, consistent application review, and a registry that records program outputs.
 
 ## 02 — Problem Statement
 
-Mkondo serves crypto and Web3 ecosystems that run non-dilutive funding programs — foundations, DAOs, L2s, treasuries — and the operators who manage those programs.
+Mkondo serves crypto and Web3 ecosystems that run non-dilutive funding programs, including foundations, DAOs, L2 ecosystems, and treasuries, along with the operators who manage those programs.
 
-**The four core breakdowns**
+### Common Breakdowns in Funding Programs
 
 | Problem | Description |
 |---|---|
-| No unified lifecycle | Funding programs are scattered across forums, Notion pages, forms, and spreadsheets. No unified flow from program intent → applications → approvals → outcomes |
-| Inconsistent review | Funders drown in proposals evaluated against ad-hoc criteria — decisions are slow, inconsistent, and impossible to compare across rounds |
-| No outcome visibility | Ecosystems publish spend data but rarely have structured outcome data. They cannot tell which programs or tracks are actually working |
-| No program-level learning | Data about rounds and funded projects is scattered — ecosystems cannot see, compare, or iterate on what their programs actually produce over time |
-
----
+| No unified lifecycle | Program information is spread across forums, documents, forms, and spreadsheets, with no consistent flow from program design to application review and outcomes |
+| Inconsistent review | Applications are evaluated against inconsistent criteria, making decisions slower and difficult to compare across rounds |
+| Limited outcome visibility | Ecosystems often publish spend data but rarely track structured outcomes, making it hard to understand program impact |
+| No program-level learning | Data about funded projects and rounds is fragmented, preventing ecosystems from comparing results or improving programs over time |
 
 ## 03 — Target Users
 
-| User | Role | What Mkondo gives them |
+| User | Role | What Mkondo provides |
 |---|---|---|
-| Grant / Ecosystem Funding Operators | Design programs, run rounds, coordinate reviewers | Structured intent forms, AI pre-filtering, clear review queue |
-| Ecosystem / Growth Leads | Decide where non-dilutive capital goes | Program registry and metrics to compare rounds and tracks |
-| Foundations / Governance Committees | Approve budgets, accountable for impact | At-a-glance view of what funded projects are delivering |
-| Builders / Applicants | Submit applications | Public form with no login required. Structured feedback if revision needed |
-
----
+| Grant / Ecosystem Funding Operators | Design programs, run rounds, coordinate reviewers | Structured program setup, AI triage of applications, and a review queue |
+| Ecosystem / Growth Leads | Decide where non-dilutive capital is deployed | Registry views and metrics to compare rounds and program tracks |
+| Foundations / Governance Committees | Approve budgets and assess funding impact | High-level visibility into funded projects and reported outcomes |
+| Builders / Applicants | Submit funding applications | Public application forms with structured feedback if revisions are needed |
 
 ## 04 — Product Scope
 
-**In scope**
-- Program creation wizard — Program Intent Form, Application Form Setup, Rubric Setup
-- Public-facing application form — builder-facing, no login required
-- Application Intake API — validates, stores, triggers agent
-- Screening agent — Pass / Needs Revision / Not a Fit triage against program intent
-- Operator review queue — full application + AI evaluation + rubric scoring + decision
-- Program registry — programs, rounds, funded projects, KPI rollups
+### In Scope
 
-**Out of scope**
+- Program creation workflow: Program Intent Form, Application Form setup, and Rubric setup
+- Public application form for builders with no login required
+- Application Intake API to validate and store submissions and trigger the screening agent
+- Screening agent that triages applications as Pass / Needs Revision / Not a Fit based on program intent
+- Operator review queue displaying the application, AI evaluation summary, rubric scoring, and decision tools
+- Program registry storing programs, rounds, funded projects, and KPI rollups
+
+### Out of Scope
+
 - Grantee milestone tracking
 - Payment processing or on-chain disbursements
 - Multi-tenant architecture
 - Full authentication system
 - Real-time collaboration between reviewers
-- Mobile-optimized views
-
----
+- Mobile-optimized interfaces
 
 ## 05 — Key User Flows
 
-**Core demo flow**
-1. Operator creates a program and defines KPIs in the registry
-2. Builder submits an application via the public form URL — no login
-3. Agent runs eligibility and fit check — returns Pass / Needs Revision / Not a Fit
-4. Operator clicks Approve — auto-creates the Grant Profile and updates the registry
-5. Registry shows the funded project with KPI fields ready to fill
+### Core Demonstration Flow
 
-**Operator flow**
-1. Creates program — name, ecosystem, mission, budget, eligibility, logo
-2. Creates round — dates, funding range, tracks, max applications
-3. Completes Program Intent Form — goals, user outcomes, evaluation criteria
-4. Configures Application Form — loads vertical template, sets required fields
-5. Sets Rubric — criteria, score ranges, weights
-6. Publishes program — system generates a public application URL
-7. Shares URL — builders submit via public page — no login
-8. Receives applications in queue — post-agent screening, sorted by triage label
-9. Reviews Pass applications — sees full application + AI evaluation + pre-scores
-10. Makes decision — Approve / Reject / Request Info
+1. An operator creates a program and defines KPIs in the registry.
+2. A builder submits an application using the public form URL with no login required.
+3. The screening agent evaluates eligibility and program fit, returning Pass, Needs Revision, or Not a Fit.
+4. The operator approves the application, which creates a grant profile and updates the registry.
+5. The registry displays the funded project with KPI fields ready to be populated.
 
-**Builder flow**
-1. Receives application link from operator or program page
-2. Opens public form — no account required
-3. Answers pre-screening questions — confirms fit before full form loads
-4. Fills out application and submits
-5. Sees confirmation screen with application ID
-6. If Needs Revision — receives structured feedback and resubmits
+### Operator Flow
 
----
+1. Create a program with name, ecosystem, mission, budget, eligibility, and logo.
+2. Create a round with dates, funding range, tracks, and application limits.
+3. Complete the Program Intent Form defining goals, outcomes, and evaluation criteria.
+4. Configure the application form using a template and required fields.
+5. Set the rubric with criteria, scoring ranges, and weights.
+6. Publish the program, generating a public application URL.
+7. Share the application link for builder submissions.
+8. Receive applications in the review queue after agent screening.
+9. Review Pass applications with the full submission, AI evaluation summary, and rubric.
+10. Make a final decision: Approve, Reject, or Request additional information.
+
+### Builder Flow
+
+1. Receive the application link from the program page or operator.
+2. Open the public application form without creating an account.
+3. Complete initial eligibility questions before the full form appears.
+4. Submit the completed application.
+5. Receive a confirmation screen with an application ID.
+6. If labeled Needs Revision, receive structured feedback and resubmit.
 
 ## 06 — Core Features
 
-**Program Intent Builder**
-Operators define program goals, target applicants, eligibility criteria, tracks, and KPI metrics in a structured form before any applications are accepted. This intent config drives the application form template, the agent's evaluation lens, the rubric, and the registry's KPI fields.
+### Program Intent Builder
 
-**Application Intake**
-A public-facing form URL is generated per round on publish. Builders submit with no login required. The Application Intake API validates required fields, stores the submission, returns a confirmation with an application ID, and triggers the screening agent asynchronously.
+Operators define program goals, target applicants, eligibility criteria, tracks, and KPI metrics through a structured form before applications open. This configuration determines the application template, screening criteria, evaluation rubric, and registry KPI fields.
 
-**AI-Assisted Pre-Filtering**
-The screening agent reads program intent + rubric + submitted application and returns a structured triage result. Pass → main review queue. Needs Revision → actionable feedback returned to applicant. Not a Fit → recorded with reasons for program learning.
+### Application Intake
 
-**Application Intake & Review**
-All Pass applications enter the review queue. Operators and reviewers see the full application, the agent's evaluation summary and pre-scores, and the rubric. Reviewers score each criterion and make a final decision. Human judgment is always final.
+Each round generates a public application form URL. Builders submit applications without logging in. The Application Intake API validates required fields, stores the submission, returns a confirmation with an application ID, and triggers the screening agent asynchronously.
 
-**Funding Program Registry**
-Stores program, round, and track records. Approved applications auto-create a funded project row with KPI fields defined at the program level. Registry views show program-level summaries across rounds.
+### Application Intake and Review
 
----
+Applications labeled Pass enter the operator review queue. Reviewers see the full submission, the agent’s evaluation summary and preliminary scores, and the rubric criteria. Human reviewers score each criterion and make the final decision.
 
-## 07 — Screening Agent
+### Funding Program Registry
 
-The Mkondo screening agent is a program-intent-driven prefilter. It reads program intent, eligibility criteria, and evaluation rubric, then triages each application into Pass / Needs Revision / Not a Fit.
+The registry stores records for programs, rounds, and tracks. Approved applications automatically create a funded project entry with KPI fields defined at the program level. Registry views summarize program activity across rounds.
 
-See [agent section in private repo] for full agent PRD, directives, and output schema.
+## 07 —  AI-Assisted Pre-Filtering AGent
 
-**Agent output fields**
+Triages incoming applications before human review. Each submission receives a structured assessment and is labeled Pass, Needs Revision, or Not a Fit, helping reviewers quickly identify which applications should move forward for full evaluation.
+Further technical details are maintained in the private repository.
+
+### Agent Output Fields
 
 | Field | Description |
 |---|---|
 | triage_label | Pass / Needs Revision / Not a Fit |
 | confidence | High / Medium / Low |
 | eligible | true / false |
-| rubric_pre_scores | Score per criterion with rationale |
-| overall_pre_score | Weighted average across rubric |
-| intent_alignment | 1–5 score — fit with program goals |
-| strengths | 2–4 specific bullets |
-| risks | 2–4 specific bullets |
-| revision_feedback | Populated for Needs Revision only |
-| not_a_fit_reason | Populated for Not a Fit only |
-| tags | Outcome tags feeding the registry |
-| summary | 2–3 sentence plain-language summary |
+| rubric_pre_scores | Preliminary score per rubric criterion with rationale |
+| overall_pre_score | Weighted rubric score |
+| intent_alignment | 1–5 score representing fit with program goals |
+| strengths | 2–4 summarized strengths |
+| risks | 2–4 identified risks |
+| revision_feedback | Returned for Needs Revision applications |
+| not_a_fit_reason | Recorded for Not a Fit applications |
+| tags | Outcome tags used by the registry |
+| summary | 2–3 sentence summary of the application |
 
-The agent does not make final decisions. Human reviewers score all Pass applications and make every approval decision. Operators retain full control.
-
----
+The agent does not make approval decisions. Human reviewers evaluate Pass applications and make final funding decisions.
 
 ## 08 — Grant Registry
 
-**Program-level view per round**
+### Program-Level View Per Round
+
 - Round ID, Grant Type, Open Date, Close Date
-- Total Applications, Approved Grants, Total Allocated, Average Grant Size
-- Top tracks, pass rate, common agent flags
+- Total applications, approved grants, total allocated funds, average grant size
+- Top tracks, pass rates, and common screening flags
 
-**Per-grant profile (auto-created on approval)**
-- Program / Round / Track, Grant Type, Approved Amount, Decision Date, Status
-- KPI metric slots defined at program level
-- External ID link for cross-platform tracking if applicable
+### Per-Grant Profile (Created on Approval)
 
----
+- Program, round, and track information
+- Grant type, approved amount, decision date, and status
+- KPI metric slots defined at the program level
+- Optional external ID link for cross-platform tracking
 
 ## 09 — Current State
 
-**What exists today**
-- Working prototype with core screens: Dashboard, Applications Queue, Application Detail, AI Evaluation panel, Decision screen
-- Functional forms: Program Info, Program Intent, Application Form (public), Rubric
+### Existing Components
+
+- Working prototype with core screens: Dashboard, Applications Queue, Application Detail, AI Evaluation panel, and Decision screen
+- Functional forms: Program Info, Program Intent, Public Application Form, and Rubric
 - Application Intake API endpoint
-- Mock agent pipeline — hardcoded JSON output per application, identical UI to live agent
-- DB seed script with sample programs, rounds, applications, agent results, registry projects
-- Registry — Programs Table and Program Page
+- Mock screening agent pipeline producing structured JSON results
+- Database seed script containing example programs, rounds, applications, agent results, and registry entries
+- Program registry with Programs table and program detail pages
 
-**What is mocked vs functional**
-- Agent outputs are currently deterministic mocks. Grant funding wires the live Claude API call with structured JSON output.
+### Mocked vs Functional Components
 
----
+The screening agent currently produces deterministic mock outputs. Integrating a live LLM call using the Claude API will replace the mocked responses with structured JSON output.
 
 ## 10 — Risks
 
 | Risk | Mitigation |
 |---|---|
-| Agent accuracy depends on intent form quality | Structured template with examples and validation |
-| Operator adoption requires workflow change | Playbook and documentation lower adoption barrier |
-| Builder form completion rates | Clear field guidance, Needs Revision flow returns actionable feedback |
-| KPI fields left empty | Registry design makes empty fields visible — social pressure without enforcement |
-
----
+| Agent accuracy depends on the quality of the intent form | Use structured templates with examples and validation |
+| Operator adoption requires changes to existing workflows | Provide documentation and operator playbooks |
+| Builder completion rates for application forms | Include clear guidance and a revision flow with actionable feedback |
+| KPI fields may remain empty | Registry design highlights missing metrics to encourage completion |
 
 ## 11 — Roadmap (Post v1)
 
-- Live LLM agent — replace mocked outputs with Claude API structured JSON calls
-- Form builder UI — configurable field builder for custom application forms without code
-- Multi-program support — multiple ecosystem programs running simultaneously
-- Cross-round registry intelligence — which programs and tracks produced best outcomes over time
-- External integrations — on-chain registry hooks, cross-platform export, CSV / API
+- Replace mocked outputs with live LLM screening via the Claude API
+- Form builder UI for configurable application forms without code
+- Support for multiple programs operating within the same environment
+- Cross-round registry analysis to compare outcomes across programs and tracks
+- External integrations such as on-chain registry hooks and data export (CSV / API)
