@@ -1,4 +1,4 @@
-# FlowOS — Product Validation
+# Mkondo — Product Validation
 
 **Purpose:** To test if the pages and forms built align with current process and assets used by live grant programs. This stage was designed to answer: do the forms work as intended for the people running real programs, and does the output map to what real applicants submit?
 
@@ -8,7 +8,7 @@
 
 Document testing and structured walkthrough against live grant programs and approved applications.
 
-No operator interviews conducted yet — planned as next validation step. This stage was designed to answer: do the forms and pages built reflect how real grant programs operate, and is the FlowOS solution directionally right?
+No operator interviews conducted yet — planned as next validation step. This stage was designed to answer: do the forms and pages built reflect how real grant programs operate, and is the Mkondo solution directionally right?
 
 ---
 
@@ -46,7 +46,7 @@ No operator interviews conducted yet — planned as next validation step. This s
 |---|---|
 | Program Info Form | Fields map to how both Stacks and Optimism define a program — ecosystem identity, vertical, eligibility, and outcome focus captured without gaps |
 | Round Intent Form | Round-level setup aligns with how both programs structure a funding round — budget, target applicants, success metrics |
-| Rubric | FlowOS's 6 criteria match Stacks exactly — same names, same 0–5 scale. No modification needed |
+| Rubric | Mkondo's 6 criteria match Stacks exactly — same names, same 0–5 scale. No modification needed |
 | Pre-screening | Three questions map cleanly to Stacks eligibility requirements and outcome focus |
 | Consumer template fields | MAU, total unique users, and retention rate match the traction metrics BNS One reported (750-800 MAU, 6,500+ unique users, 68% engagement) — confirmed across two programs |
 | DeFi template fields | TVL, DAU/MAW, and 30-day transaction volume map to on-chain metrics Lido reported (~$408M TVL) — agent-verifiable via DefiLlama |
