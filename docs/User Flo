@@ -1,0 +1,124 @@
+# Mkondo — User Flows
+
+Operator and applicant flows.
+
+---
+
+## Operator Flow — First Time
+
+```text
+OPERATOR LOGS INTO MKONDO
+    │
+    ▼
+[ Step 1 ] PROGRAM INFO FORM
+    │   ├── Program name
+    │   ├── Ecosystem / chain
+    │   ├── Focus area and vertical
+    │   ├── Eligibility criteria
+    │   └── Rubric selection
+    │
+    ▼
+[ Step 2 ] PROGRAM ROUND INTENT FORM
+    │   ├── Round details
+    │   ├── Budget and dates
+    │   ├── Target applicants
+    │   ├── Program metrics
+    │   ├── Application form selection
+    │   └── Rubric selection
+    │
+    ▼
+[ Step 3 ] CONFIGURE APPLICATION FORM
+    │   ├── Load form template
+    │   ├── Adjust fields
+    │   └── Mark required fields
+    │
+    ▼
+[ Step 4 ] CONFIGURE RUBRIC
+    │   ├── Add criteria
+    │   ├── Set score range
+    │   └── Set weights
+    │
+    ▼
+[ Step 5 ] REVIEW & PUBLISH
+    │   └── Public application page generated
+    │
+    ▼
+PROGRAM GOES LIVE
+```
+
+---
+
+## Operator Flow — Returning (New Round)
+
+```text
+OPERATOR OPENS EXISTING PROGRAM
+    │
+    ▼
+[ Step 1 ] REVIEW PROGRAM INFO
+    │   └── Update core details if needed
+    │
+    ▼
+[ Step 2 ] UPDATE ROUND INTENT
+    │   ├── Update dates, budget, goals, and metrics
+    │   ├── Reuse or update application form
+    │   └── Reuse or update rubric
+    │
+    ▼
+[ Step 3 ] REVIEW & PUBLISH
+    │   └── New round goes live
+```
+
+---
+
+## Applicant Flow — Public, No Login
+
+```text
+APPLICANT OPENS PUBLIC APPLICATION PAGE
+    │
+    ▼
+PROGRAM PAGE
+    │   ├── Program overview
+    │   ├── Eligibility requirements
+    │   ├── Funding scope
+    │   └── Apply entry point
+    │
+    ▼
+PRE-SCREENING
+    │   ├── Basic fit questions
+    │   └── Eligibility check
+    │
+    ▼
+FULL APPLICATION FORM
+    │   ├── Project details
+    │   ├── Team and links
+    │   ├── Funding request
+    │   └── Milestones and supporting information
+    │
+    ▼
+SUBMISSION CONFIRMATION
+    │   └── Application recorded
+```
+
+---
+
+## Operator Review Flow
+
+```text
+APPLICATIONS QUEUE
+    │   ├── Applications organized for review
+    │   └── Screening result surfaced before full review
+    │
+    ▼
+APPLICATION DETAIL
+    │   ├── Full application content
+    │   └── Evaluation summary
+    │
+    ▼
+DECISION
+    ├── APPROVE
+    ├── REJECT
+    └── REQUEST INFO
+    │
+    ▼
+REGISTRY UPDATED
+```
