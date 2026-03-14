@@ -10,19 +10,21 @@ Operator flows and applicant flow.
 OPERATOR LOGS INTO MKONDO
     │
     ▼
-[ Step 1 ] PROGRAM INFO FORM  ← done once for each program
+[ Step 1 ] PROGRAM INFO FORM  ← done once, never repeated for this program
     │   ├── Program name
     │   ├── Ecosystem / chain
-    │   ├── Focus area and vertical
+    │   ├── Outcome Focus + Area of Focus
+    │   ├── Vertical
     │   ├── Eligibility criteria
     │   └── Rubric selection
     │
     ▼
 [ Step 2 ] PROGRAM ROUND INTENT FORM  ← done each funding cycle
-    │   ├── Round details
-    │   ├── Budget and dates
-    │   ├── Target applicants
-    │   ├── Program metrics
+    │   ├── Funding Round ID
+    │   ├── Grant type, open/close dates, total budget
+    │   ├── Area of Focus (this round)
+    │   ├── Target applicants + Projects we fund
+    │   ├── Program impact metrics
     │   ├── Application Form:  [ + Create new ]
     │   └── Rubric:            [ + Create new ]
     │
@@ -34,13 +36,13 @@ OPERATOR LOGS INTO MKONDO
     │
     ▼
 [ Step 4 ] CONFIGURE RUBRIC
-    │   ├── Add criteria
+    │   ├── Add criteria with scoring guidance
     │   ├── Set score range
-    │   └── Set weights
+    │   └── Set weights per criterion
     │
     ▼
 [ Step 5 ] REVIEW & PUBLISH
-    │   └── System generates a public application page
+    │   └── System generates: /apply/[round-id]
     │
     ▼
 PROGRAM IS LIVE — operator shares URL with builders
@@ -54,18 +56,21 @@ PROGRAM IS LIVE — operator shares URL with builders
 OPERATOR LOGS IN → goes to existing Program page
     │
     ▼
-[ Step 1 ] PROGRAM INFO FORM  ← already exists
-    │   Update only if core program details have changed
+[ Step 1 ] PROGRAM INFO FORM  ← SKIP (already exists)
+    │   Pre-filled. Edit only if program details have changed.
     │
     ▼
 [ Step 2 ] PROGRAM ROUND INTENT FORM  ← update for this round
+    │   ├── Pre-filled from previous round
     │   ├── Update goals, budget, dates, and metrics
     │   ├── Application Form:  [ Use existing ] or [ + Create new ]
     │   └── Rubric:            [ Use existing ] or [ + Create new ]
     │
     ▼
 [ Step 3 ] REVIEW & PUBLISH
-    │   └── New round goes live
+    └── New public URL: /apply/[new-round-id]
+
+Previous round data preserved in registry.
 ```
 
 ---
@@ -73,10 +78,10 @@ OPERATOR LOGS IN → goes to existing Program page
 ## Applicant Flow — Public, No Login
 
 ```text
-APPLICANT receives link or finds program page
+APPLICANT receives link or finds via registry
     │
     ▼
-PROGRAM PAGE
+PROGRAM PAGE  /apply/[round-id]
     │   ├── Program name, description, and scope
     │   ├── Eligibility requirements
     │   ├── Funding range and deadline
@@ -90,8 +95,8 @@ PRE-SCREENING
     ▼
 FULL APPLICATION FORM
     │   ├── Project details
-    │   ├── Team and links
-    │   ├── Funding request
+    │   ├── Team information and links
+    │   ├── Project stage and funding request
     │   └── Milestones and supporting information
     │
     ▼
@@ -105,8 +110,8 @@ SUBMISSION CONFIRMATION
 
 ```text
 APPLICATIONS QUEUE
-    │   ├── Applications grouped for review
-    │   └── Screening result surfaced before full review
+    │   ├── Filtered by screening result
+    │   └── Applications organized for review
     │
     ▼
 APPLICATION DETAIL
@@ -115,10 +120,7 @@ APPLICATION DETAIL
     │
     ▼
 DECISION
-    ├── APPROVE
-    ├── REJECT
-    └── REQUEST INFO
-    │
-    ▼
-REGISTRY UPDATED
+    ├── APPROVE       → project enters registry
+    ├── REJECT        → decision recorded
+    └── REQUEST INFO  → applicant invited to revise
 ```
