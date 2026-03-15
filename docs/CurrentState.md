@@ -7,20 +7,17 @@ This page shows what is already built in Mkondo, what currently works, and what 
 
 ---
 
-## What Is Built
+## What Is Already Built
 
-- Program Info form
-- Eligibility form
-- Round Intent form
-- Application Builder
-- Consumer Apps / Wallets template
-- DeFi / Protocols template
-- Rubric builder
-- Review page
-- Application detail view
-- AI evaluation view
+- Program setup flow: Program Info, Eligibility, and Round Intent
+- Application Builder with two verticals: Consumer Apps / Wallets and DeFi / Protocols
+- Rubric builder with structured scoring logic
+- Completed application review flow
+- AI evaluation surfaces showing recommendation, strengths, risks, and summary
 - Program profile view
 - Registry prototype views
+- Supporting product documentation, user flows, validation work, and system architecture
+
 
 ---
 
